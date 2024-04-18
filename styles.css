@@ -1,0 +1,59 @@
+:root{
+    --white: #fff;
+    --light-grayish-violet: hsl(270, 3%, 87%);
+    --dark-grayish-violet: hsl(279, 6%, 55%);
+    --very-dark-violet: hsl(278, 68%, 11%);
+    --red: hsl(0, 100%, 66%); /*for input errors*/
+
+}
+
+*{
+    font-family: "Space Grotesk", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    max-height: 100vh;
+    max-width: 100vw;
+    height: 100vh;
+    background-color: var(--white);
+}
+
+form{
+    position: absolute;
+    right: 300px;
+    top: 20%;
+}
+
+label{
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-bottom: 0.325rem;
+    color: var(--very-dark-violet);
+}
+
+.input__div{
+    display: flex;
+    flex-direction: column;
+}
+
+input{
+    border: 1px solid var(--light-grayish-violet);
+    height: 2.4rem;
+    border-radius: 0.5rem;
+    padding: 1rem 0.8rem;
+}
+
+button{
+    background-color: var(--very-dark-violet);
+    color: var(--white);
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 0.5rem;
+    height: 2.5rem;
+    margin-top: 0.5rem;
+}
