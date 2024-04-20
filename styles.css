@@ -21,10 +21,12 @@ body{
     background-color: var(--white);
 }
 
+/* form */
+
 form{
     position: absolute;
-    right: 300px;
-    top: 20%;
+    right: 370px;
+    top: 35%;
 }
 
 label{
@@ -33,9 +35,19 @@ label{
     font-weight: 500;
     margin-bottom: 0.325rem;
     color: var(--very-dark-violet);
+    letter-spacing: 2px;
 }
 
 .input__div{
+    display: flex;
+    flex-direction: column;
+}
+
+.input-width{
+    width: 380px;
+}
+
+.expiry-date__div{
     display: flex;
     flex-direction: column;
 }
@@ -44,7 +56,8 @@ input{
     border: 1px solid var(--light-grayish-violet);
     height: 2.4rem;
     border-radius: 0.5rem;
-    padding: 1rem 0.8rem;
+    padding: 1.6rem 0.8rem;
+    font-size: 1rem;
 }
 
 button{
@@ -56,4 +69,59 @@ button{
     border-radius: 0.5rem;
     height: 2.5rem;
     margin-top: 0.5rem;
+}
+
+/* card */
+
+.card{
+    color: var(--white);
+}
+
+.card__number{
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: 4px;
+    word-spacing: 5px;
+}
+
+.card__front{
+    background-image: url('images/bg-card-front.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 450px;
+    height: 260px;
+    top: 130px;
+    left: 100px;
+    padding: 30px 40px;
+}
+
+.card__front-details{
+    height: 100%;
+}
+
+.card__back{
+    background-image: url('images/bg-card-back.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 450px;
+    height: 260px;
+    top: 410px;
+    left: 180px;
+
+}
+
+.security-num{
+    transform: translateY(110px);
+    position: absolute;
+    right: 60px;
+    width: fit-content;
+}
+
+/* error */
+
+.error{
+    color: var(--red);
+    font-size: 14px;
+    display: none;
 }

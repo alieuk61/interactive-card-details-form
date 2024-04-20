@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/icons8-card-32.png">
   <script src="index.js" defer></script>
   <link rel="stylesheet" href="styles.css">
   <title>Frontend Mentor | Interactive card details form</title>
@@ -14,32 +14,57 @@
 
 </head>
 <body>
-<img src="images/bg-main-desktop.png" alt="">
+<img src="images/bg-main-desktop.png" style="height: 100%;">
 
-<img src="images/bg-card-front.png" style="position: absolute; top: 50px; left: 300px;">
-<img src="images/bg-card-back.png" style="position: absolute; top: 400px; left: 300px;">">
+<!-- front of card -->
+<div class="card__front">
+  <div class="card card__front-details" style="position: relative;">
+    <div style="margin-bottom: 70px;">
+      <img src='images/card-logo.svg' alt="front-of-card">
+    </div>
+    <p class="card__number">0000 0000 0000 0000</p>
+    <div style="display: flex; justify-content: space-between;">
+      <p class="card__holder">Jane Appleseed</p>
+      <p class="card__expiry-date">00/00</p>
+    </div>
+  </div>
+</div>
 
-<form action="">
-  <div class="input__div">
+<!-- back of card -->
+<div class="card__back">
+  <div class="card card__back-details" style="position: relative;">
+    <p class="security-num">000</p>
+  </div>
+</div>
+
+<form action="" style="display: flex; flex-direction: column; gap: 30px;">
+  <div class="input__div input-width">
    <label for="">Cardholder Name</label>
    <input type="text" placeholder="e.g. Jane Appleseed">
-   <p>Cant be blank</p>
+   <p class="error">Cant be blank</p>
   </div>
 
-  <div class="input__div">
+  <div class="input__div input-width">
    <label for="">Card Number</label>
    <input type="text" placeholder="e.g. 1234 5678 9123 0000">
-   <p>Wrong format, numbers only</p>
+   <p class="error">Wrong format, numbers only</p>
   </div>
 
-  <section>
+  <!-- expiry date section -->
+  <section style="display: grid; grid-template-columns: repeat(2, 45%); justify-content: space-between;" class="input-width">
     <div class="input__div">
       <label for="">Exp. Date (MM/YY)</label>
-      <div>
-        <input type="text" placeholder="MM">
-        <p>Cant be blank</p>
-        <input type="text" placeholder="YY">
-        <p>Cant be blank</p>
+      <!-- expiry date input boxes -->
+      <div style="display: grid; grid-template-columns: repeat(2, 50%); gap: 5px;">
+        <section class="expiry-date__div">
+          <input type="text" placeholder="MM" class="expiry-date__month">
+          <p class="error">Cant be blank</p>
+        </section>
+        <section class="expiry-date__div">
+          <input type="text" placeholder="YY" class="expiry-date__year">
+          <p class="error">Cant be blank</p>
+        </section>
+        
       </div>
      </div>
 
@@ -52,11 +77,9 @@
   <button>Confirm</button>
 </form>
 
-  <!-- 0000 0000 0000 0000
-  Jane Appleseed
-  00/00
+  <!-- 
 
-  000 -->
+   -->
 
 
   <!-- Completed state start -->
@@ -65,9 +88,10 @@
   We've added your card details
   Continue
    -->
-  <div class="attribution">
+
+  <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </div> -->
 </body>
 </html>
