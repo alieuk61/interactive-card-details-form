@@ -40,13 +40,13 @@
 <form action="" style="display: flex; flex-direction: column; gap: 30px;">
   <div class="input__div input-width">
    <label for="">Cardholder Name</label>
-   <input type="text" placeholder="e.g. Jane Appleseed">
+   <input class="input__cardholder" type="text" placeholder="e.g. Jane Appleseed">
    <p class="error">Cant be blank</p>
   </div>
 
   <div class="input__div input-width">
    <label for="">Card Number</label>
-   <input type="text" placeholder="e.g. 1234 5678 9123 0000">
+   <input type="text" placeholder="e.g. 1234 5678 9123 0000" class="input__cardnumber">
    <p class="error">Wrong format, numbers only</p>
   </div>
 
@@ -57,11 +57,11 @@
       <!-- expiry date input boxes -->
       <div style="display: grid; grid-template-columns: repeat(2, 50%); gap: 5px;">
         <section class="expiry-date__div">
-          <input type="text" placeholder="MM" class="expiry-date__month">
+          <input type="text" placeholder="MM" class="input__expiry-date__month">
           <p class="error">Cant be blank</p>
         </section>
         <section class="expiry-date__div">
-          <input type="text" placeholder="YY" class="expiry-date__year">
+          <input type="text" placeholder="YY" class="input__expiry-date__year">
           <p class="error">Cant be blank</p>
         </section>
         
@@ -70,24 +70,21 @@
 
      <div class="input__div">
       <label for="">CVC</label>
-      <input type="text" placeholder="e.g. 123">
+      <input type="text" placeholder="e.g. 123" class="input__cvc">
+      <p class="error">Cant be blank</p>
     </div>
   </section>
   
-  <button>Confirm</button>
+  <button class="confirm-btn">Confirm</button>
 </form>
 
-  <!-- 
-
-   -->
-
-
-  <!-- Completed state start -->
-
-  <!-- Thank you!
-  We've added your card details
-  Continue
-   -->
+<div class="thank-you__display">
+  <img src="images/icon-complete.svg" style="width: 80px;">
+  <h3 style="text-transform: uppercase; font-size: 1.6rem; margin-bottom: 1rem; color: hsl(278, 68%, 11%); letter-spacing: 5px; font-weight: 500;">Thank you!</h3>
+  <p style="color: hsl(279deg, 6%, 55%);">We've added your card details</p>
+  <button class="continue-button" style="width: 380px;">Continue</button>
+</div>
+  
 
   <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 

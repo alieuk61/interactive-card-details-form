@@ -25,8 +25,8 @@ body{
 
 form{
     position: absolute;
-    right: 370px;
-    top: 35%;
+    right: 350px;
+    top: 30%;
 }
 
 label{
@@ -56,7 +56,7 @@ input{
     border: 1px solid var(--light-grayish-violet);
     height: 2.4rem;
     border-radius: 0.5rem;
-    padding: 1.6rem 0.8rem;
+    padding: 1.4rem 0.8rem;
     font-size: 1rem;
 }
 
@@ -122,6 +122,20 @@ button{
 
 .error{
     color: var(--red);
-    font-size: 14px;
+    font-size: 12.5px;
     display: none;
 }
+
+/* thank you display */
+
+.thank-you__display{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 390px;
+    top: 30%;
+    text-align: center;
+    align-items: center;
+}
+
