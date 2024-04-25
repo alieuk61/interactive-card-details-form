@@ -56,7 +56,8 @@ confirmButton.addEventListener('click', (e) => {
         errorText[index].style.display = 'block'
        }
 
-       if (input === cardnumberInput && cardnumberInput.value.length < 16){
+        //  when to display that the numbers are too short
+       if (input === cardnumberInput && cardnumberInput.value.length < 16 && cardnumberInput.value.length >= 1){
         error = true;
         errorText[index].textContent = errors.insufficientCharLength
         errorText[index].style.display = 'block'
@@ -72,7 +73,16 @@ confirmButton.addEventListener('click', (e) => {
      if (!error) {
         // Display card details if there are no errors
         cardholder.textContent = cardholderInput.value;
-        cardNumber.textContent = cardnumberInput.value;
+        let formattedValue = '';
+
+        for (let i = 0; i < cardnumberInput.value.length; i += 4) {
+          formattedValue += cardnumberInput.value.substr(i, 4) + ' ';
+        }
+
+        // Trim any extra spaces at the end
+        formattedValue = formattedValue.trim();
+
+        cardNumber.textContent = formattedValue;
         // Concatenate expiry month and year values
         expiryDate.textContent = `${expiryMonthInput.value}/${expiryYearInput.value}`;
         securityNumber.textContent = cvcInput.value;
